@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Territorial.io Tutorial & Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-background"></div>
+    <div id="content">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="https://territorial.io" target="_blank" rel="noopener noreferrer">
+                        <img src="territorial-logo.png" alt="Territorial.io Logo">
+                        <span>Territorial.io
+                    </a>
+                </div>
+                
+                <ul>
+                    <li><button class="nav-button" data-section="home">Home</button></li>
+                    <li><button class="nav-button" data-section="clans">Clans</button></li>
+                    <li><button class="nav-button" data-section="bots">Discord Bots</button></li>
+                    <li><button class="nav-button" data-section="tutorial">Tutorial</button></li>
+                    <li><button class="nav-button" data-section="content-creators">Content Creators</button></li>
+                    
+                </ul>
+            </nav>
+            
+            
+        </header>
+        <main>
+            <section id="home" class="active">
+                <h1>Welcome to Territorial.io Tutorial & Information</h1>
+                <p>Explore the world of Territorial.io and dominate the map!</p>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="icon-map"></i>
+                        <h3>Strategic Gameplay</h3>
+                        <p>Master the art of territorial expansion</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon-users"></i>
+                        <h3>Multiplayer Battles</h3>
+                        <p>Compete against players worldwide</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon-cog"></i>
+                        <h3>Resource Management</h3>
+                        <p>Balance your economy and military</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon-trophy"></i>
+                        <h3>Leaderboards</h3>
+                        <p>Climb the ranks and become the best</p>
+                    </div>
+                </div>
+            </section>
+            <section id="clans" class="hidden">
+                <h2>Clans</h2>
+                
+                <div class="clan-categories">
+                    <div class="clan-category-card" data-category="nation">
+                        <h3>Nation Clans</h3>
+                        <p>Join clans representing nations and continents</p>
+                        <button class="view-clans-btn">View Clans</button>
+                    </div>
+                    <div class="clan-category-card" data-category="all">
+                        <h3>All Clans</h3>
+                        <p>Explore all available clans</p>
+                        <button class="view-clans-btn">View Clans</button>
+                    </div>
+                    
+                </div>
+            
+                <div id="clan-lists" class="hidden">
+                    <button id="back-to-categories" class="back-btn">&larr; Back to Categories</button>
+                    
+                    <div id="nation-clans" class="clan-list hidden">
+                        <div class="clan-grid">
+                            <div class="clan-item">
+                                <img src="ru-logo.png" alt="RU Clan Logo">
+                                <h4>RU (Russian Clan)</h4>
+                                <p>Members: 450+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/uXqy83pcVm">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="pl-logo.png" alt="PL Clan Logo">
+                                <h4>PL (Polish Clan)</h4>
+                                <p>Members: 1200+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/pl-926923813592125522">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="fr-logo.png" alt="FR Clan Logo">
+                                <h4>FR (French Clan)</h4>
+                                <p>Members: 1000+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/zkyz2GaGh7">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="tr-logo.png" alt="TR Clan Logo">
+                                <h4>TR (Turkic Clan)</h4>
+                                <p>Members: 750+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/hjT5tyZ4nc">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="ua-logo.png" alt="UA Clan Logo">
+                                <h4>UA (Ukrainian Clan)</h4>
+                                <p>Members: 400+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/AAhhfURthS">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="ind-logo.png" alt="IND Clan Logo">
+                                <h4>IND (Indian Clan)</h4>
+                                <p>Members: 350+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/S7bkTfUHnp">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="nl-logo.png" alt="NL Clan Logo">
+                                <h4>NL Clan</h4>
+                                <p>Members: 350+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/Xxcay9YqGM">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="esp-logo.png" alt="ESP Clan Logo">
+                                <h4>ESP (Spanish Clan)</h4>
+                                <p>Members: 100+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/XPufzpJjP6">Join Discord</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div id="all-clans" class="clan-list hidden">
+                        <div class="clan-grid">
+                            <div class="clan-item">
+                                <img src="corgi-logo.png" alt="Corgi Clan Logo">
+                                <h4>Corgi</h4>
+                                <p>Members: 2800+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/5TAT8mC96F">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="og-logo.png" alt="OG Clan Logo">
+                                <h4>OG</h4>
+                                <p>Members: 3300+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/joinog">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="void-logo.png" alt="VOID Clan Logo">
+                                <h4>VOID</h4>
+                                <p>Members: 300+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/YDbVnFDprG">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="pz-logo.png" alt="PZ Clan Logo">
+                                <h4>PZ</h4>
+                                <p>Members: 100+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/hschDVSsbZ">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="union-logo.png" alt="UNION Clan Logo">
+                                <h4>UNION</h4>
+                                <p>Members: 1600+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/CjjmX7m2Mv">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="bung-logo.png" alt="BUNG Clan Logo">
+                                <h4>BUNG</h4>
+                                <p>Members: 100+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/FkXBZ5CWP7">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="vice-logo.png" alt="VICE Clan Logo">
+                                <h4>VICE</h4>
+                                <p>Members: 300+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/CjjmX7m2Mv">Join Discord</button>
+                            </div>
+                            <div class="clan-item">
+                                <img src="aurora-logo.png" alt="AURORA Clan Logo">
+                                <h4>AURORA</h4>
+                                <p>Members: 650+</p>
+                                <button class="join-discord-btn" data-discord="https://discord.gg/n3Us4mp954">Join Discord</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div id="discord-prompt" class="hidden">
+                <p>You are about to join the clan's Discord server. Do you want to proceed?</p>
+                <button id="confirm-join">Yes, join</button>
+                <button id="cancel-join">Cancel</button>
+            </div> 
+            <section id="content-creators" class="hidden">
+                <h2>Content Creators</h2>
+                
+                <div class="creator-grid">
+                    <!-- Creator 1 -->
+                    <div class="creator-item">
+                        <div class="creator-header">
+                            <img src="biffeur.png" alt="Creator 1 Avatar">
+                            <div class="creator-info">
+                                <h4>Biffeur</h4>
+                                <p class="creator-platform">YouTube</p>
+                                <p class="creator-stats">Subscribers: 350+</p>
+                            </div>
+                        </div>
+                        <div class="creator-buttons">
+                            <button class="about-btn">About</button>
+                            <button class="visit-channel-btn" data-channel="https://www.youtube.com/@biffeur2092">Visit Channel</button>
+                        </div>
+                        <div class="creator-description hidden">
+                            <p>I've been playing territorial.io for 3 years, building up a wealth of experience and strategy. On this channel you will find videos where I share about my games, sometimes including specific challenges and tips. Whether you're a beginner or a seasoned player, there's something here for everyone. Join me and let's conquer the world together!</p>
+                        </div>
+                    </div>
+            
+                    <!-- Creator 2 -->
+                    <div class="creator-item">
+                        <div class="creator-header">
+                            <img src="creator2-avatar.png" alt="Creator 2 Avatar">
+                            <div class="creator-info">
+                                <h4>idk who here</h4>
+                                <p class="creator-platform">Youtube</p>
+                                <p class="creator-stats">Subscribers: 10</p>
+                            </div>
+                        </div>
+                        <div class="creator-buttons">
+                            <button class="about-btn">About</button>
+                            <button class="visit-channel-btn" data-channel="https://twitch.tv/creator2">Visit Channel</button>
+                        </div>
+                        <div class="creator-description hidden">
+                            <p>Entertaining Territorial.io streamer. Hosts weekly community events and challenges. Come join the fun and improve your skills!</p>
+                        </div>
+                    </div>
+            
+                    <!-- Add more creator cards as needed -->
+                </div>
+            </section>
+        
+            <section id="bots" class="hidden">
+                <h2>Public Discord Bots fOR Territorial.io Clans</h2>
+                <div class="bot-list">
+                    <div class="bot-item">
+                        <img src="bot1.png" alt="Bot 1 Avatar">
+                        <h3>Territorial.io Points System</h3>
+                        <p>Made by platz1de (sdsd)</p>
+                        <button class="add-bot-btn">Add to Discord</button>
+                    </div>
+                    <div class="bot-item">
+                        <img src="bot2.png" alt="Bot 2 Avatar">
+                        <h3>TT.io Clan Bot</h3>
+                        <p>Made by CWV (Dr. Viktor)</p>
+                        <button class="add-bot-btn">Add to Discord</button>
+                    </div>
+                    <!-- Add more bot items as needed -->
+                </div>
+            </section>
+            <section id="tutorial" class="hidden">
+                <h2>Tutorial & Guide (Credits:- TheAngel)</h2>
+                <div class="tutorial-menu">
+                    <div class="tutorial-card" data-section="username">
+                        <h3>Username</h3>
+                        <p>Learn about choosing and changing your username.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="clan">
+                        <h3>Clans</h3>
+                        <p>Discover how to join existing clans or create your own.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="account">
+                        <h3>Account Login / Creation</h3>
+                        <p>Guide to creating an account and logging in securely.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="multiplayer">
+                        <h3>Multiplayer Guide</h3>
+                        <p>Tips and strategies for playing with others online.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="singleplayer">
+                        <h3>Single Player Guide</h3>
+                        <p>Master the game in solo mode with these tips.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="currency">
+                        <h3>Game Currency (Gold)</h3>
+                        <p>Learn about earning and spending gold in the game.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="menu">
+                        <h3>Game Menu</h3>
+                        <p>Navigate the game menu like a pro.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="logs">
+                        <h3>Logs</h3>
+                        <p>Understanding game logs and their importance.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="charts">
+                        <h3>Charts</h3>
+                        <p>Interpret clan charts to improve your clan's strategy.</p>
+                    </div>
+                    <div class="tutorial-card" data-section="replays">
+                        <h3>Replays</h3>
+                        <p>Learn how to watch and analyze game replays.</p>
+                    </div>
+                </div>
+                <div id="tutorial-content" class="hidden">
+                    <div id="username-content">
+                        <h2>Choosing Your Username</h2>
+                        <div class="tutorial-content">
+                            <h4>Choosing Your Username</h4>
+                            <p>Your username is your identity in the game. Here's what you need to know:</p>
+                            <ul>
+                                <li>It will be displayed in multiplayer matches.</li>
+                                <li>Choose something appropriate and memorable.</li>
+                                <li>Avoid using personal information.</li>
+                            </ul>
+            
+                            <h4>Username Rules</h4>
+                            <ul>
+                                <li>Use letters, numbers, and underscores.</li>
+                                <li>Clan names must not exceed 8 characters.</li>
+                            </ul>
+            
+                            <h4>Example</h4>
+                            <img src="username.png" alt="Username Tutorial Image" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+                            <p>In this image, 'CLAN' inside the [ ] is the dummy clan name, and 'viktor' is the username.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="clan-content">
+                        <h2>Clans in Territorial.io</h2>
+                        <div class="tutorial-content">
+                            <h4>What are Clans?</h4>
+                            <p>Clans are groups of players who team up to compete together. Joining a clan can enhance your gaming experience and provide a sense of community.</p>
+            
+                            <h4>Joining a Clan</h4>
+                            <ol>
+                                <li>Look for clan recruitment messages in the game chat or on community forums.</li>
+                                <li>Contact the clan leader or a recruiter to express your interest.</li>
+                                <li>If accepted, you'll receive instructions on how to add the clan tag to your username.</li>
+                            </ol>
+            
+                            <h4>Creating Your Own Clan</h4>
+                            <ol>
+                                <li>Choose a unique clan name (max 8 characters).</li>
+                                <li>Add the clan tag to your username: [CLAN]Username</li>
+                                <li>Invite other players to join your clan.</li>
+                                <li>Consider creating a Discord server for clan communication.</li>
+                            </ol>
+            
+                            <h4>Clan Benefits</h4>
+                            <ul>
+                                <li>Teamwork in multiplayer matches</li>
+                                <li>Shared strategies and tips</li>
+                                <li>Participation in clan wars and events</li>
+                                <li>Social aspect and making new friends</li>
+                            </ul>
+            
+                            <h4>Clan Responsibilities</h4>
+                            <ul>
+                                <li>Represent your clan positively</li>
+                                <li>Participate in clan activities</li>
+                                <li>Help and support fellow clan members</li>
+                                <li>Follow clan rules and guidelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="currency-content">
+                        <h2>Game Currency (Gold) in Territorial.io</h2>
+                        <div class="tutorial-content">
+                            <h4>What is Gold?</h4>
+                            <p>Gold is the primary in-game currency in Territorial.io. It's used for various purposes and can significantly enhance your gaming experience. Community has also nicknamed it "butter," and it is represented in-game by this emoji: 🧈. Gold is used for various functions in the game, primarily in the lobby. However, it cannot be used to gain any in-game advantage.</p>
+            
+                            <h4>Earning Gold</h4>
+                            <ul>
+                                <li>Winning matches: For now gold can be earned in only one way and that is by winning matches
+                                    Earn gold based on your performance and position.</li>
+                                    <li>In-Game Activities: You can earn gold by participating in multiplayer games. Additionally, other players can transfer gold to you.</li>
+                            </ul>
+            
+                            <h4>How to Spend Gold</h4>
+                            <ul>
+                                <li>Viewing your public profile</li>
+                                <li>Viewing leaderboards: Clans, Clan members, 1v1 players, and admins</li>
+                                <li>Scrolling through the leaderboard</li>
+                                <li>Searching for someone on the leaderboard via custom settings</li>
+                                <li>Viewing logs for 1v1 reports, Admin elections, Blockchain, and Clan leader elections</li>
+                                <li>Sending gold to someone</li>
+                                <li>Electing clan leaders</li>
+                                <li>Downvoting/upvoting Admins</li>
+                                <li>Reporting players</li>
+                                <li>Refreshing someone’s profile information</li>
+                                <li>Viewing your own public profile</li>
+                                <li>Viewing other people's public profiles</li>
+                                <li>Viewing/editing charts</li>
+                                <li>Uploading or renewing your bio</li>
+                                <p>You can identify which actions cost gold by the button's font color. If the font is yellow, pressing it will cost gold.</p>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Other tutorial content sections can be added here -->
+                </div>
+            </section>
+            
+            
+            
+        </main>
+        <footer>
+            <p>&copy; 2023 Territorial.io Tutorial & Information. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="icon-discord"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

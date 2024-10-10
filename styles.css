@@ -1,0 +1,759 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #0f3460;
+    --text-color: #e94560;
+    --light-text: #f1f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+#particles-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: var(--light-text);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.clan-list, .bot-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.clan-item, .bot-item {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.clan-item img, .bot-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.join-clan-btn, .add-bot-btn {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-clan-btn:hover, .add-bot-btn:hover {
+    background-color: var(--text-color);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.news-item {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-item h3, .news-item p {
+    padding: 0 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tutorial-content {
+    background-color: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.tutorial-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid var(--accent-color);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--text-color);
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.active {
+    animation: fadeIn 0.5s ease forwards;
+}
+/* Advanced button styles */
+.nav-button, .join-clan-btn, .add-bot-btn {
+    background: linear-gradient(45deg, #0f3460, #16213e);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-button:hover, .join-clan-btn:hover, .add-bot-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Animated section transitions */
+main > section {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+main > section.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+main > section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glowing text effect */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #e94560; }
+    50% { text-shadow: 0 0 20px #e94560, 0 0 30px #e94560; }
+    100% { text-shadow: 0 0 5px #e94560; }
+}
+
+h1, h2 {
+    animation: glow 2s infinite;
+}
+
+/* Responsive grid for clan and bot items */
+.clan-list, .bot-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card hover effect */
+.clan-item, .bot-item, .news-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clan-item:hover, .bot-item:hover, .news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+/* card */
+.tutorial-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tutorial-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.tutorial-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.tutorial-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.tutorial-card p {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.learn-more-btn {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.learn-more-btn:hover {
+    background-color: var(--text-color);
+}
+
+/* Advanced button styles for consistency */
+.learn-more-btn {
+    background: linear-gradient(45deg, #0f3460, #16213e);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Territorial logo */
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    object-fit: cover;
+}
+
+.logo span {
+    margin-left: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.clan-category {
+    margin-bottom: 2rem;
+}
+
+.clan-category h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.clan-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.clan-item {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.clan-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.clan-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.clan-item p {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.join-clan-btn {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.join-clan-btn:hover {
+    background-color: var(--text-color);
+}
+.clan-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.clan-category-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.clan-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.clan-category-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.clan-category-card p {
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.view-clans-btn, .back-btn {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.view-clans-btn:hover, .back-btn:hover {
+    background-color: var(--text-color);
+}
+
+.clan-list {
+    margin-top: 2rem;
+}
+
+.clan-list h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.clan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.clan-item {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.clan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clan-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.clan-item h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin: 1rem 0 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.clan-item p {
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.join-discord-btn {
+    background-color: #7289DA;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.join-discord-btn:hover {
+    background-color: #5a6eaf;
+}
+
+
+#discord-prompt {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-align: center;
+}
+
+#discord-prompt p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+#discord-prompt button {
+    margin: 0 0.5rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#confirm-join {
+    background-color: #7289DA;
+    color: white;
+}
+
+#confirm-join:hover {
+    background-color: #5a6eaf;
+}
+
+#cancel-join {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+#cancel-join:hover {
+    background-color: #ff3333;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+.creator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.creator-item {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.creator-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.creator-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.creator-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-right: 1rem;
+}
+
+.creator-info {
+    flex-grow: 1;
+}
+
+.creator-item h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    margin: 0 0 0.25rem;
+    font-size: 1.2rem;
+}
+
+.creator-platform {
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+}
+
+.creator-stats {
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+.creator-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.about-btn, .visit-channel-btn {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex: 1;
+    margin: 0 0.5rem;
+}
+
+.about-btn:hover, .visit-channel-btn:hover {
+    background-color: var(--text-color);
+}
+
+.creator-description {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    line-height: 1.4;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+.tutorial-content h4 {
+    font-size: 1.1em;
+    color: #ca1e1e;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.tutorial-content h2 {
+    font-size: 1.5em;
+    color: #cc1010;
+    margin-bottom: 20px;
+}
+
+.tutorial-content p, .tutorial-content ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
